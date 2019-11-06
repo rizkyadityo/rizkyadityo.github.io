@@ -44,9 +44,6 @@ header {
 .navlinks li a:hover {
   color: #64f5ff;
 }
-.navlinks li a:active{
-  color: #64f5ff
-}
 
 .active {
   color: #64f5ff;
