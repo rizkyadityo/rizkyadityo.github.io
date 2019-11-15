@@ -1,8 +1,45 @@
+.navbar {
+    height: 60px;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    color: white;
+    padding: 5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    font-weight: bold;
+    position: relative;
+}    
+
+.navlinks {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.navlinks li {
+    list-style: none;
+}
+
+.navlinks a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.15rem;
+}
+
 .menu-wrap {
     position: fixed;
     top: 0;
     right: 0;
     z-index: 1;
+    display: none;
 }
 
 .menu-wrap .toggler {
@@ -128,4 +165,13 @@
     color: inherit;
     text-decoration: none;
     transition: color 0.4s ease;
+}
+
+@media(max-width:1080px) {
+    .navlinks{width:40%}
+}
+
+@media(max-width:720px) {
+    .menu-wrap{display: flex}
+    .navlinks{display: none}
 }
