@@ -178,7 +178,7 @@
     .navlinks{width:40%}
 }
 
-@media(max-width:720px) {
+@media(max-width:1280px) {
     .menu-wrap{display: flex}
     .navlinks{display: none}
 }
