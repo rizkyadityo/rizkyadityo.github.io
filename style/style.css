@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
 
 :root {
-  --primary-color: rgba(27, 27, 25, 0.75);
+  --primary-color: rgb(27, 27, 25, 0.75);
   --secondary-color: rgba(73, 75, 82, 0.918);
+  --hover-color: rgb(104, 247, 235);
   --menu-speed: 0.75s;
 }
 
@@ -10,6 +11,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* overflow: hidden; */
 }
 
 body {
@@ -27,13 +29,13 @@ body {
 .showcase {
   background-color: var(--primary-color);
   color: #fff;
-  height: 100vh;
+  height: 92.5vh;
   position: relative;
 }
 
-.showcase:before{
+.showcase:before {
   content: '';
-  background: url('../img/img02.jpg') no-repeat center center/cover;
+  background: url('../img/img03.jpg') no-repeat center center/cover;
   position: absolute;
   top: 0;
   left: 0;
