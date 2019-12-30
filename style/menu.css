@@ -1,11 +1,13 @@
 .navbar {
-    height: 7.5vh;
-    background: var(--secondary-color);
+    height: 10vh;
+    background: black;
     opacity: 1;
     display: flex;
     align-items: center;
 }
 
+
+/* need to be revised to actual logo/icon */
 .icon {
     color: white;
     padding-left: 5rem;
@@ -41,9 +43,9 @@
 
 .menu-wrap {
     position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 1;
+    top: 1vh;
+    right: 1rem;
+    z-index: 99;
     display: none;
 }
 
@@ -63,8 +65,8 @@
     top: 0;
     right: 0;
     z-index: 1;
-    width: 7.5vh;
-    height: 7.5vh;
+    width: 8vh;
+    height: 8vh;
     padding: 1.7vh;
     background: none;
     display: flex;
@@ -140,7 +142,8 @@
 }
 
 .menu-wrap .menu > div {
-    background: var(--secondary-color);
+    background: black;
+    opacity: 0.8;
     border-radius: 50%;
     width: 200vw;
     height: 200vw;
@@ -164,7 +167,6 @@
     padding: 1rem;
     color: white;
     font-size: 1.25rem;
-    font-weight: bold;
     letter-spacing: 0.2rem;
 }
 
@@ -174,17 +176,18 @@
     transition: color 0.4s ease;
 }
 
-@media(max-width:720px) {
-    .navlinks{width:40%}
-    .container{padding: 2rem}
-    .icon{padding-left: 2rem}
-    .showcase h1{font-size: 2rem}
-    .showcase p{font-size: 1rem}
+.menu-wrap .menu > div > div > ul > li > a:hover {
+    color: var(--hover-color);
+    font-weight: bold;
 }
 
-@media(max-width:1280px) {
+@media(max-width:1080px) {
     .menu-wrap{display: flex}
     .navlinks{display: none}
-    .container{padding: 3rem}
     .icon{padding-left: 3rem}
+}
+
+@media(max-width:720px) {
+    .navlinks{width:40%}
+    .icon{padding-left: 2rem}
 }
