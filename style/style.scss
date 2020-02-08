@@ -1,0 +1,161 @@
+@import 'variables';
+@import 'mixin';
+
+* {
+    @include resetmp();
+    box-sizing: border-box;
+}
+
+body {
+    @include fontp();
+    line-height: 1.4;
+}
+
+@import 'navbar';
+
+.showcase {
+        position: relative;
+        h1 {
+            position: relative;
+            text-align: left;
+            @include fonth1;
+        }
+        p {
+            text-align: left;
+            padding: 1.5rem 0;
+            @include fontp;
+        }
+        .background {
+            background: url('../img/img01.jpg') no-repeat center center/cover;
+            height: 90vh;
+        }
+        .gradient {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-image: linear-gradient(to bottom, $secondaryColor, $primaryColor);
+            opacity: 0.85;
+            width: 100%;
+            height: 100%;
+        }
+        .container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            max-width: 100ch;
+            height: 100%;
+            justify-content: center;
+            text-align: center;
+            padding: $defPadding;
+            color: $textColor;
+        }
+}
+.preview {
+    background-color: $primaryColor;
+    padding: $defPadding;
+    height: 100vh;
+    .headrp {
+        font-size: $sizesH;
+        font-weight: bolder;
+        color: $textColor;
+        margin-bottom: 1rem;
+        font-family: 'Open Sans', sans-serif;
+    }
+    .swiper-container {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: $widthSwiper;
+        height: $heightSwiper;
+        background: $swiperColor;
+    }
+}
+
+@import 'bttop';
+@import 'tail';
+
+@media(max-width:1080px) {
+    .showcase .container{padding: 3rem}
+    .showcase .preview{padding: 3rem}
+    .preview .headrp{font-size: 2.5rem}
+    .preview .headrp{margin-top: 10vh}
+    .preview .swiper-slide{width: 250px}
+    .preview .swiper-slide{height: 250px}
+    .navbar .menu-wrap{display: flex}
+    .navbar .navlinks{display: none}
+    .navbar .icon{padding-left: 3rem}
+}
+  
+@media(max-width:720px) {
+    .showcase .container{padding: 2rem}
+    .showcase h1{font-size: 3rem}
+    .showcase .showcase p{font-size: 1rem}
+    .tail{text-align: center}
+    .tail .socialmedia ul{flex-direction: column}
+    .tail .socialmedia li{padding-right: 0}
+    .preview{padding: 2rem}
+    .preview .headrp{font-size: 2rem}
+    .preview .headrp{margin-top: 10vh}
+    .preview .swiper-slide{width: 225px}
+    .preview .swiper-slide{height: 225px}
+    .navbar .navlinks{width:40%}
+    .navbar .icon{padding-left: 2rem}
+}
+
+// @media(max-width:1080px) {
+//     .container
+//         padding: 3rem
+//     .preview
+//         padding: 3rem
+//     .headrp
+//         font-size: 2.5rem
+//     .headrp
+//         margin-top: 10vh
+//     .swiper-slide
+//         width: 250px
+//     .swiper-slide
+//         height: 250px
+//     .menu-wrap
+//         display: flex
+//     .navlinks
+//         display: none
+//     .icon
+//         padding-left: 3rem
+// }
+  
+// @media(max-width:720px) {
+//     .conta
+//         padding: 2rem
+//     .icon
+//         padding-left: 2rem
+//     .showcase h1
+//         font-size: 3rem
+//     .showcase p
+//         font-size: 1rem
+//     .tail
+//         text-align: center
+//     .socialmedia ul
+//         flex-direction: column
+//     .socialmedia li
+//         padding-right: 0
+//     .preview
+//         padding: 2rem
+//     .headrp
+//         font-size: 2rem
+//     .headrp
+//         margin-top: 10vh
+//     .swiper-slide
+//         width: 225px
+//     .swiper-slide
+//         height: 225px
+//     .navlinks
+//         width:40%
+//     .icon
+//         padding-left: 2rem
+// }

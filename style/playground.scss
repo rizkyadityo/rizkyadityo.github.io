@@ -1,0 +1,31 @@
+.menu-wrap {
+    .hamburger {
+        > div {
+            &:before, &:after {
+                display:none;
+            }
+            &:after {
+                display: block;
+            }
+        }
+    }
+
+    .toggler {
+        &:checked {
+            + .hamburger {
+                > div {
+                    &:before, &:after {
+                        top: 0;
+                    }
+                }
+            }
+            &:hover {
+                + .hamburger {
+                    > div {
+                        transform: rotate(225deg);
+                    }
+                }
+            }
+        }
+    }
+}

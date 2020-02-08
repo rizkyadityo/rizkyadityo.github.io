@@ -1,0 +1,19 @@
+@import 'variables';
+
+@mixin resetmp {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin fontp {
+    font-family: 'PT Sans', sans-serif;
+    font-size: $sizeP;
+    letter-spacing: $spaceP;
+}
+
+@mixin fonth1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: $sizeH;
+    font-weight: bolder;
+    letter-spacing: $spaceH
+}
