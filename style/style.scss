@@ -9,6 +9,7 @@
 body {
     @include fontp();
     line-height: 1.4;
+    background-color: $primaryColor;
 }
 
 @import 'navbar';
@@ -53,17 +54,59 @@ body {
         }
 }
 .preview {
-    background-color: $primaryColor;
     padding: $defPadding;
     height: 100vh;
+    background-color: $primaryColor;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-areas: 
+    "box1 box4"
+    "box2 box4"
+    "box3 box4";
     .headrp {
+        grid-area: box1;
+        grid-row: 1/2;
+        grid-column: 1/2;
+        display: flex;
+        align-items: flex-end;
         font-size: $sizesH;
         font-weight: bolder;
         color: $textColor;
-        margin-bottom: 1rem;
+        // margin-bottom: 1rem;
         font-family: 'Open Sans', sans-serif;
     }
+    .moreposts{
+        grid-area: box2;        
+        color: $textColor;
+        display: flex;
+        align-items: center;
+    }
+    .morebox{
+        grid-area: box3;
+        display: flex;
+        align-items: flex-start;
+        #morebox {
+            padding: 0.5rem;
+            border-radius: 10px;
+            border-style: solid;   
+            border-color: $textColor;
+            cursor: pointer;
+            background-color: transparent;
+            @include fontp();
+            font-size: 1rem;
+            font-weight: bold;
+            color: $textColor;
+            &:hover {
+                background-color: $textColor;
+                color: $primaryColor;
+            }
+        }
+    }
     .swiper-container {
+        grid-area: box4;
         width: 100%;
         padding-top: 50px;
         padding-bottom: 50px;
@@ -83,6 +126,21 @@ body {
 @media(max-width:1080px) {
     .showcase .container{padding: 3rem}
     .showcase .preview{padding: 3rem}
+
+    .preview{margin-bottom: 2.5rem}
+    .preview{height: 100%}
+    .preview{justify-items: center}
+    .preview{align-items: center}
+    .preview{grid-template-rows: 1fr 1fr 1fr}
+    .preview{grid-template-columns: 1fr}
+    .preview{grid-row-gap: 20px}
+    .preview{grid-template-areas: 
+        "box1"
+        "box2"
+        "box3"
+        "box4"}
+    .preview .swiper-container{padding-top: 0px}
+    .preview .moreposts{text-align: center}
     .preview .headrp{font-size: 2.5rem}
     .preview .headrp{margin-top: 10vh}
     .preview .swiper-slide{width: 250px}
@@ -107,55 +165,3 @@ body {
     .navbar .navlinks{width:40%}
     .navbar .icon{padding-left: 2rem}
 }
-
-// @media(max-width:1080px) {
-//     .container
-//         padding: 3rem
-//     .preview
-//         padding: 3rem
-//     .headrp
-//         font-size: 2.5rem
-//     .headrp
-//         margin-top: 10vh
-//     .swiper-slide
-//         width: 250px
-//     .swiper-slide
-//         height: 250px
-//     .menu-wrap
-//         display: flex
-//     .navlinks
-//         display: none
-//     .icon
-//         padding-left: 3rem
-// }
-  
-// @media(max-width:720px) {
-//     .conta
-//         padding: 2rem
-//     .icon
-//         padding-left: 2rem
-//     .showcase h1
-//         font-size: 3rem
-//     .showcase p
-//         font-size: 1rem
-//     .tail
-//         text-align: center
-//     .socialmedia ul
-//         flex-direction: column
-//     .socialmedia li
-//         padding-right: 0
-//     .preview
-//         padding: 2rem
-//     .headrp
-//         font-size: 2rem
-//     .headrp
-//         margin-top: 10vh
-//     .swiper-slide
-//         width: 225px
-//     .swiper-slide
-//         height: 225px
-//     .navlinks
-//         width:40%
-//     .icon
-//         padding-left: 2rem
-// }

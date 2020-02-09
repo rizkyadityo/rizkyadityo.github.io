@@ -1,0 +1,17 @@
+.menu-wrap .hamburger > div:before, .menu-wrap .hamburger > div:after {
+  display: none;
+}
+
+.menu-wrap .hamburger > div:after {
+  display: block;
+}
+
+.menu-wrap .toggler:checked + .hamburger > div:before, .menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+}
+
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+/*# sourceMappingURL=playground.css.map */
