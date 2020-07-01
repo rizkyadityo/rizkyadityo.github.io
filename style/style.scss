@@ -121,6 +121,80 @@ body {
         background: $swiperColor;
     }
 }
+    // for blogs.html
+
+.blogscontainer{
+    min-height: 100vh;
+    padding: 5rem;
+    background-color: black;
+    opacity: 0.6;
+    .blogshead {
+        align-content: center;
+        h1 {
+            position: relative;
+            text-align: center;
+            color: $textColor;
+            @include fonth1;
+        }
+        .display{
+            padding: 2rem;
+            text-align: center;
+            #blogsgrid{
+                font-size: 2rem;
+                margin: 0.2rem;
+                cursor: pointer;
+                width: 60px;
+                height: 60px;
+                background-color: transparent;
+                border-radius: 10px;
+                border-style: solid;
+                border-color: $secondaryColor;
+                outline: none;
+                color: $secondaryColor;
+                &:focus {
+                    border-color: $textColor;
+                    color: $textColor;
+                }
+            }
+            #blogslist{
+                font-size: 2rem;
+                margin: 0.2rem;
+                cursor: pointer;
+                width: 60px;
+                height: 60px;
+                background-color: transparent;
+                border-radius: 10px;
+                border-style: solid;
+                border-color: $secondaryColor;
+                outline: none;
+                color: $secondaryColor;
+                &:focus {
+                    border-color: $textColor;
+                    color: $textColor;
+                }
+            }
+        }
+    }
+    
+    .blogPosts{
+        display: grid;
+
+        margin-top: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        grid-column-gap: 20px;
+        grid-row-gap: 30px;
+        img {
+            width: 100%;
+        }
+        .post{
+            color: $textColor;
+            h3{
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
 
 @import 'bttop';
 @import 'tail';

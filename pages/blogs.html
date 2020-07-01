@@ -3,53 +3,102 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width = device - width, initial-scale = 1.0">
+    <!-- <meta name="viewport" content="width = device - width, initial-scale = 1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie = edge">
-    <title>Rizky Adityo</title>
-    <link rel="stylesheet" href="/style/style.css" />
-    <link rel="stylesheet" href="/style/menu.css">
+    <title>Blogs - Rizky Adityo</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:700,800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3ab1aad34d.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
 </head>
 
 <body>
+    <div class="bttop"><button id="bttop"><i class="fas fa-chevron-up"></i></button></div>
     <div class="navbar">
-        <a class="icon" href="../index.html">Adityo</a>
+        <a class="icon" class="active" href="../index.html">Adityo</a>
         <ul class="navlinks">
-            <li><a href="projects.html">Projects</a></li>
-            <li><a style="color: rgb(104, 247, 235)" href="blogs.html">Blogs</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="">Blogs</a></li>
+            <li><a href="">About</a></li>
         </ul>
-    </div>
 
-
-    <div class="menu-wrap">
-        <input type="checkbox" class="toggler">
-        <div class="hamburger">
-            <div></div>
-        </div>
-        <div class="menu">
-            <div>
+        <div class="menu-wrap">
+            <input type="checkbox" class="toggler">
+            <div class="hamburger">
+                <div></div>
+            </div>
+            <div class="menu">
                 <div>
-                    <ul>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a style="color: rgb(104, 247, 235)" href="blogs.html">Blogs</a></li>
-                        <li><a href="about.html">About</a></li>
-                    </ul>
+                    <div>
+                        <ul>
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="">Blogs</a></li>
+                            <li><a href="">About</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="blogscontainer">
+        <div class="blogshead">
+            <h1>Blog Posts</h1>
+            <div class="display">
+                <button onclick="grid()" autofocus id="blogsgrid"><i class="fa fa-th" aria-hidden="true"></i></button>
+                <button onclick="list()" id="blogslist"><i class="fa fa-list-ul" aria-hidden="true"></i></button>
+            </div>
+            <!-- <div class="blogsSearch">
+            
+                    </div> -->
+        </div>
 
-    <div class="showcase">
-        <div class="container showcase-inner">
-            <h1>This is Blogs page</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, quos perferendis. Sequi odit vel totam
-                dolorem
-                itaque corrupti illo cupiditate. Excepturi consequatur, sequi voluptas magni illo nemo dolorem repellat
-                sint!
-            </p>
+        <div class="blogPosts">
+            <div class="post"><img class="postimg" src="../img/post1.jpg" alt="">
+                <h3>Test Heading for Post1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium ex expedita, ipsum, atque nam
+                    numquam fugit eum iure vitae facere dicta distinctio rerum deserunt soluta officiis veniam dolores
+                    ab et?</p>
+            </div>
+            <div class="post"><img class="postimg" src="../img/post2.jpg" alt="">
+                <h3>Test Heading for Post2</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, optio beatae. Rerum reprehenderit
+                    sequi doloribus iste cupiditate ex maiores hic quidem, at, accusantium minima nihil minus aliquam
+                    nemo provident voluptatem.Molestias illo iure ducimus assumenda, reiciendis nihil! Impedit enim
+                    voluptatum quae est provident similique consectetur? Quis illo dicta alias velit? Quaerat modi autem
+                    deleniti tempora dolorem quisquam soluta sunt distinctio!</p>
+            </div>
+            <div class="post"><img class="postimg" src="../img/post3.jpg" alt="">
+                <h3>Test Heading for Post3</h3>
+            </div>
+            <div class="post"><img class="postimg" src="../img/post4.jpg" alt="">
+                <h3>Test Heading for Post4</h3>
+            </div>
         </div>
     </div>
+
+
+    <div class="tail">
+        <div class="job">
+            <h3>RIZKY ADITYO PRASTAMA</h3>
+            <p>Geophyisicist</p>
+        </div>
+        <P>Jakarta / Bandung</P>
+        <div class="contacts">
+            <p>Get in touch with me through:</p>
+            <div class="socialmedia">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/rizkyadityop/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/rizkyadityo" target="_blank">GitHub</a></li>
+                    <li><a href="https://www.instagram.com/rizkyadityop/" target="_blank">Instagram</a></li>
+                    <li><a href="mailto:p.rizkyadityo@gmail.com?Subject=Hello%20Adit" target="_top">E-mail</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="../main.js"></script>
 </body>
 
 </html>

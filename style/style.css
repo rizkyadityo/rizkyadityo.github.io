@@ -44,7 +44,7 @@ body {
   margin-right: 5rem;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 30%;
+  width: 25%;
 }
 
 .navbar .navlinks li {
@@ -54,7 +54,7 @@ body {
 .navbar .navlinks a {
   color: white;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.5rem;
   letter-spacing: 0.25rem;
   font-weight: bold;
 }
@@ -396,6 +396,93 @@ body {
   width: 50vh;
   height: 60vh;
   background: white;
+}
+
+.blogscontainer {
+  min-height: 100vh;
+  padding: 5rem;
+  background-color: black;
+  opacity: 0.6;
+}
+
+.blogscontainer .blogshead {
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.blogscontainer .blogshead h1 {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 4.5rem;
+  font-weight: bolder;
+  letter-spacing: 0.2rem;
+}
+
+.blogscontainer .blogshead .display {
+  padding: 2rem;
+  text-align: center;
+}
+
+.blogscontainer .blogshead .display #blogsgrid {
+  font-size: 2rem;
+  margin: 0.2rem;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #5f5f5f;
+  outline: none;
+  color: #5f5f5f;
+}
+
+.blogscontainer .blogshead .display #blogsgrid:focus {
+  border-color: white;
+  color: white;
+}
+
+.blogscontainer .blogshead .display #blogslist {
+  font-size: 2rem;
+  margin: 0.2rem;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #5f5f5f;
+  outline: none;
+  color: #5f5f5f;
+}
+
+.blogscontainer .blogshead .display #blogslist:focus {
+  border-color: white;
+  color: white;
+}
+
+.blogscontainer .blogPosts {
+  display: -ms-grid;
+  display: grid;
+  margin-top: 2rem;
+  -ms-grid-columns: (minmax(500px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 30px;
+}
+
+.blogscontainer .blogPosts img {
+  width: 100%;
+}
+
+.blogscontainer .blogPosts .post {
+  color: white;
+}
+
+.blogscontainer .blogPosts .post h3 {
+  font-size: 1.5rem;
 }
 
 .bttop {
