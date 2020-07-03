@@ -31,7 +31,7 @@ function grid() {
 function list() {
     var x = document.getElementsByClassName("blogPosts");
     var y = document.getElementsByClassName("postimg");
-    x[0].style.gridTemplateColumns = "repeat(1, minmax(500px, 1fr))";
+    x[0].style.gridTemplateColumns = "repeat(1, minmax(100%, 1fr))";
     for (var i = 0; i < y.length; i++) {
         y[i].style.display = "none";
     }
@@ -42,5 +42,6 @@ function list() {
         z[j].style.borderLeftStyle = "solid";
         z[j].style.borderLeftColor = "white";
         z[j].style.padding = "10px";
+        z[j].style.maxWidth = "100ch";
     }
 }

@@ -429,8 +429,8 @@ body {
   font-size: 2rem;
   margin: 0.2rem;
   cursor: pointer;
-  width: 60px;
-  height: 60px;
+  width: 3.75rem;
+  height: 3.75rem;
   background-color: transparent;
   border-radius: 10px;
   border-style: solid;
@@ -466,9 +466,10 @@ body {
 .blogscontainer .blogPosts {
   display: -ms-grid;
   display: grid;
+  width: 100%;
   margin-top: 2rem;
-  -ms-grid-columns: (minmax(500px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-column-gap: 20px;
   grid-row-gap: 30px;
 }
@@ -567,6 +568,9 @@ body {
   .showcase .preview {
     padding: 3rem;
   }
+  .blogscontainer {
+    padding: 3rem;
+  }
   .preview {
     margin-bottom: 2.5rem;
   }
@@ -620,6 +624,33 @@ body {
 @media (max-width: 720px) {
   .showcase .container {
     padding: 2rem;
+  }
+  .blogscontainer {
+    padding: 2rem;
+  }
+  .blogscontainer .blogshead h1 {
+    font-size: 3rem;
+  }
+  .blogscontainer .blogshead .display #blogsgrid {
+    font-size: 1.5rem;
+  }
+  .blogscontainer .blogshead .display #blogsgrid {
+    width: 3rem;
+  }
+  .blogscontainer .blogshead .display #blogsgrid {
+    height: 3rem;
+  }
+  .blogscontainer .blogshead .display #blogslist {
+    font-size: 1.5rem;
+  }
+  .blogscontainer .blogshead .display #blogslist {
+    width: 3rem;
+  }
+  .blogscontainer .blogshead .display #blogslist {
+    height: 3rem;
+  }
+  .blogscontainer .blogPosts .post {
+    font-size: 1rem;
   }
   .showcase h1 {
     font-size: 3rem;
