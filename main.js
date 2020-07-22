@@ -13,13 +13,20 @@ $(document).ready(function () {
     });
 })
 
-function grid(x) {
+function grid() {
     var x = document.getElementsByClassName("blogPosts");
     var y = document.getElementsByClassName("postimg");
 
-    x[0].style.gridTemplateColumns = "repeat(auto-fit, minmax(400px, 1fr))";
-    for (var i = 0; i < y.length; i++) {
-        y[i].style.display = "";
+    if (wd.matches) {
+        x[0].style.gridTemplateColumns = "repeat(1, minmax(100%, 1fr))";
+        for (var i = 0; i < y.length; i++) {
+            y[i].style.display = "";
+        }
+    } else {
+        x[0].style.gridTemplateColumns = "repeat(auto-fit, minmax(500px, 1fr))";
+        for (var i = 0; i < y.length; i++) {
+            y[i].style.display = "";
+        }
     }
 
     var z = document.getElementsByClassName("post");
@@ -27,18 +34,6 @@ function grid(x) {
         z[j].style.border = "none";
         z[j].style.padding = "";
     }
-
-    // if (width.matches) {
-    //     x[0].style.gridTemplateColumns = "repeat(1, minmax(100%, 1fr))";
-    //     for (var i = 0; i < y.length; i++) {
-    //         y[i].style.display = "";
-    //     }
-    // } else {
-    //     x[0].style.gridTemplateColumns = "repeat(auto-fit, minmax(400px, 1fr))";
-    //     for (var i = 0; i < y.length; i++) {
-    //         y[i].style.display = "";
-    //     }
-    // }
 }
 
 function list() {
@@ -60,5 +55,7 @@ function list() {
     }
 }
 
-
+var wd = window.matchMedia("(max-width: 720px)")
+grid(wd)
+wd.addListener(grid)
 

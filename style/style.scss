@@ -180,7 +180,7 @@ body {
         display: grid;
         width: 100%;
         margin-top: 2rem;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
         grid-column-gap: 20px;
         grid-row-gap: 30px;
         img {
@@ -203,6 +203,7 @@ body {
     .showcase .container{padding: 3rem}
     .showcase .preview{padding: 3rem}
     .blogscontainer{padding: 3rem}
+    .blogscontainer .blogPosts{grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));}
     .preview{margin-bottom: 2.5rem}
     .preview{height: 100%}
     .preview{justify-items: center}
@@ -221,7 +222,6 @@ body {
     .navbar .navlinks{display: none}
     .navbar .icon{padding-left: 3rem}
     .blogPosts #prevtxt{display: none}
-    .blogscontainer .blogPosts{grid-template-columns: repeat(1, minmax(100%, 1fr));}
 }
 
 @media(max-width:720px) {
@@ -235,6 +235,8 @@ body {
     .blogscontainer .blogshead .display #blogslist{width: 3rem}
     .blogscontainer .blogshead .display #blogslist{height: 3rem}
     .blogscontainer .blogPosts .post{font-size: 1rem}
+    .blogscontainer .blogPosts{grid-template-columns: repeat(1, minmax(100%, 1fr));}
+    .blogPosts #prevtxt{display: none}
     .showcase h1{font-size: 3rem}
     .showcase .showcase p{font-size: 1rem}
     .tail{text-align: center}
@@ -244,6 +246,4 @@ body {
     .preview .headrp{font-size: 2rem}
     .navbar .navlinks{width:40%}
     .navbar .icon{padding-left: 2rem}
-    .blogPosts #prevtxt{display: none}
-    .blogscontainer .blogPosts{grid-template-columns: repeat(1, minmax(100%, 1fr));}
 }
