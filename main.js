@@ -13,10 +13,11 @@ $(document).ready(function () {
     });
 })
 
-function grid() {
+function grid(x) {
     var x = document.getElementsByClassName("blogPosts");
     var y = document.getElementsByClassName("postimg");
-    x[0].style.gridTemplateColumns = "repeat(auto-fit, minmax(500px, 1fr))";
+
+    x[0].style.gridTemplateColumns = "repeat(auto-fit, minmax(400px, 1fr))";
     for (var i = 0; i < y.length; i++) {
         y[i].style.display = "";
     }
@@ -26,11 +27,24 @@ function grid() {
         z[j].style.border = "none";
         z[j].style.padding = "";
     }
+
+    // if (width.matches) {
+    //     x[0].style.gridTemplateColumns = "repeat(1, minmax(100%, 1fr))";
+    //     for (var i = 0; i < y.length; i++) {
+    //         y[i].style.display = "";
+    //     }
+    // } else {
+    //     x[0].style.gridTemplateColumns = "repeat(auto-fit, minmax(400px, 1fr))";
+    //     for (var i = 0; i < y.length; i++) {
+    //         y[i].style.display = "";
+    //     }
+    // }
 }
 
 function list() {
     var x = document.getElementsByClassName("blogPosts");
     var y = document.getElementsByClassName("postimg");
+
     x[0].style.gridTemplateColumns = "repeat(1, minmax(100%, 1fr))";
     for (var i = 0; i < y.length; i++) {
         y[i].style.display = "none";
@@ -45,3 +59,6 @@ function list() {
         z[j].style.maxWidth = "100ch";
     }
 }
+
+
+

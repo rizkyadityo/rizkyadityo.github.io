@@ -619,6 +619,13 @@ body {
   .navbar .icon {
     padding-left: 3rem;
   }
+  .blogPosts #prevtxt {
+    display: none;
+  }
+  .blogscontainer .blogPosts {
+    -ms-grid-columns: (minmax(100%, 1fr))[1];
+        grid-template-columns: repeat(1, minmax(100%, 1fr));
+  }
 }
 
 @media (max-width: 720px) {
@@ -681,6 +688,13 @@ body {
   }
   .navbar .icon {
     padding-left: 2rem;
+  }
+  .blogPosts #prevtxt {
+    display: none;
+  }
+  .blogscontainer .blogPosts {
+    -ms-grid-columns: (minmax(100%, 1fr))[1];
+        grid-template-columns: repeat(1, minmax(100%, 1fr));
   }
 }
 /*# sourceMappingURL=style.css.map */
