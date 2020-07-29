@@ -195,6 +195,41 @@ body {
     }
 }
 
+// for about.html
+
+.aboutcontainer{
+    min-height: 100vh;
+    padding: 5rem;
+    color: $textColor;
+    background-color: $primaryColor;
+    .aboutheader{
+        h1{
+            @include fonth1;
+        }
+    }
+    .aboutcontent{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 3rem;
+        height: 100%;
+        .desc{
+            display: flex;
+            flex-direction: column;
+            max-width: 70ch;
+            justify-content: center;
+            .resume{
+                a{
+                    text-decoration: none;
+                    color: inherit;
+                    font-weight: bold;
+                }
+            }
+        }
+        .pic{
+            width: 100%;
+        }
+    }
+}
 
 @import 'bttop';
 @import 'tail';

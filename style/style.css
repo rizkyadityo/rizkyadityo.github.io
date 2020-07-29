@@ -486,6 +486,53 @@ body {
   font-size: 1.5rem;
 }
 
+.aboutcontainer {
+  min-height: 100vh;
+  padding: 5rem;
+  color: white;
+  background-color: #1b1b19;
+}
+
+.aboutcontainer .aboutheader h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 4.5rem;
+  font-weight: bolder;
+  letter-spacing: 0.2rem;
+}
+
+.aboutcontainer .aboutcontent {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 3rem;
+  height: 100%;
+}
+
+.aboutcontainer .aboutcontent .desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 70ch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.aboutcontainer .aboutcontent .desc .resume a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+
+.aboutcontainer .aboutcontent .pic {
+  width: 100%;
+}
+
 .bttop {
   display: block;
   margin: 0;
