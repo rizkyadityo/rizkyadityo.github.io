@@ -18,7 +18,7 @@
 <body>
   <div class="bttop"><button id="bttop"><i class="fas fa-chevron-up"></i></button></div>
   <div class="navbar">
-    <a class="icon" class="active" href="index.html">Adityo</a>
+    <a class="icon" class="active" href="/index.html">Adityo</a>
     <ul class="navlinks">
       <li><a href="/pages/blogs.html">Blogs</a></li>
       <li><a href="/pages/about.html">About</a></li>
@@ -33,7 +33,7 @@
         <div>
           <div>
             <ul>
-              <li><a href="">Home</a></li>
+              <li><a href="/index.html">Home</a></li>
               <li><a href="/pages/blogs.html">Blogs</a></li>
               <li><a href="/pages/about.html">About</a></li>
             </ul>
@@ -43,52 +43,13 @@
     </div>
   </div>
 
-  <div class="showcase">
-    <div class="background"></div>
-    <div class="gradient"></div>
-    <div class="container">
-      <h1>Hi, I'm Adit!</h1>
-      <p>Welcome to my website! I'm a geophysicist with interest in software and website development.<br>
-        You could find posts related to geophysics, programming, or just a piece of my mind.
-      </p>
-    </div>
-    <!-- <div class="mtdown">
-
-    </div> -->
-  </div>
-
-  <div class="preview">
-    <div class="headrp">
-      Recent Posts
-    </div>
-
-    <div class="moreposts">
-      Here are my latest blog posts. Swipe right to see more. <br>Be my guests!
-    </div>
-
-    <div class="morebox">
-      <a href="pages/blogs.html"><button id="morebox">More posts</button></a>
-    </div>
-
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <a href="/pages/posts/2020/post1.html"><img src="/img/swiper1.jpg" alt="swiperimg1">
-          <h1>Hello World!</h1></a>
-        </div>
-        <div class="swiper-slide">
-          <img src="/img/swiper2.jpg" alt="swiperimg2">
-          <h1>This is My Second Post</h1>
-        </div>
-        <div class="swiper-slide">
-          <img src="/img/swiper3.jpg" alt="swiperimg3">
-          <h1>This is My Third Post</h1>
-        </div>
+  <div class="postheader">
+      <div class="postcover">
+          <img src="/img/post1.jpg" alt="">
       </div>
-
-      <!-- <div class="swiper-pagination"></div> -->
-    </div>
-
+      <div class="posttitle">
+          <h1>Hello World!</h1>
+      </div>
   </div>
 
   <div class="tail">
@@ -111,25 +72,4 @@
   </div>
 
   <script src="main.js"></script>
-  <script src="swiper.min.js"></script>
-  <script>
-    var swiper = new Swiper('.swiper-container', {
-      effect: 'coverflow',
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: 'auto',
-      coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: true,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-      },
-    });
-  </script>
 </body>
-
-</html>

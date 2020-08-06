@@ -315,11 +315,7 @@ body {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: box1;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
   grid-row: 1/2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
   grid-column: 1/2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -347,8 +343,9 @@ body {
 }
 
 .preview .morebox {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
   grid-area: box3;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -391,18 +388,35 @@ body {
 }
 
 .preview .swiper-slide {
+  position: relative;
   background-position: center;
   background-size: cover;
   width: 50vh;
   height: 60vh;
-  background: white;
+}
+
+.preview .swiper-slide img {
+  width: 100%;
+  height: 100%;
+}
+
+.preview .swiper-slide h1 {
+  position: absolute;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 4.5rem;
+  font-weight: bolder;
+  letter-spacing: 0.05rem;
+  font-size: 2.5rem;
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
 }
 
 .blogscontainer {
   min-height: 100vh;
   padding: 5rem;
-  background-color: black;
-  opacity: 0.6;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .blogscontainer .blogshead {
@@ -482,15 +496,44 @@ body {
   color: white;
 }
 
+.blogscontainer .blogPosts .post a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .blogscontainer .blogPosts .post h3 {
   font-size: 1.5rem;
 }
 
 .aboutcontainer {
-  min-height: 100vh;
   padding: 5rem;
   color: white;
-  background-color: #1b1b19;
+  background-color: rgba(0, 0, 0, 0.6);
+  min-height: 90vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 20vh 1fr;
+      grid-template-rows: 20vh 1fr;
+      grid-template-areas: "box1 box3" "box2 box3";
+  grid-column-gap: 1rem;
+}
+
+.aboutcontainer .aboutheader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: box1;
 }
 
 .aboutcontainer .aboutheader h1 {
@@ -498,18 +541,13 @@ body {
   font-size: 4.5rem;
   font-weight: bolder;
   letter-spacing: 0.2rem;
+  font-size: 3rem;
 }
 
-.aboutcontainer .aboutcontent {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 3rem;
-  height: 100%;
-}
-
-.aboutcontainer .aboutcontent .desc {
+.aboutcontainer .desc {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: box2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -523,14 +561,59 @@ body {
           justify-content: center;
 }
 
-.aboutcontainer .aboutcontent .desc .resume a {
+.aboutcontainer .desc .resume a {
   text-decoration: none;
-  color: inherit;
+  color: #68f7eb;
   font-weight: bold;
 }
 
-.aboutcontainer .aboutcontent .pic {
+.aboutcontainer .pic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: box3;
+}
+
+.aboutcontainer .pic img {
+  width: 70%;
+}
+
+.postheader {
+  min-height: 90vh;
+}
+
+.postheader .postcover {
+  height: 50vh;
+}
+
+.postheader .postcover img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.postheader .posttitle {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  color: white;
+  padding: 5rem;
+  text-align: center;
 }
 
 .bttop {
@@ -673,6 +756,22 @@ body {
   .blogPosts #prevtxt {
     display: none;
   }
+  .aboutcontainer {
+    padding: 3rem;
+  }
+  .aboutcontainer .aboutheader {
+    margin-bottom: 1rem;
+  }
+  .aboutcontainer .pic {
+    margin-bottom: 3rem;
+  }
+  .aboutcontainer {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .aboutcontainer {
+        grid-template-areas: "box1" "box3" "box2";
+  }
 }
 
 @media (max-width: 720px) {
@@ -742,6 +841,9 @@ body {
   }
   .navbar .icon {
     padding-left: 2rem;
+  }
+  .aboutcontainer {
+    padding: 2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

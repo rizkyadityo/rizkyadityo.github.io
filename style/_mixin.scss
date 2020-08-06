@@ -17,3 +17,17 @@
     font-weight: bolder;
     letter-spacing: $spaceH
 }
+
+@mixin fonth1swiper{
+    font-family: 'Open Sans', sans-serif;
+    font-size: $sizeH;
+    font-weight: bolder;
+    letter-spacing: $spaceHswiper;
+}
+
+@mixin fonth1posttitle{
+    font-family: 'Libre Baskerville', serif;
+    font-size: $sizeHpost;
+    font-weight: bold;
+    letter-spacing: $spaceHposttitle;
+}
