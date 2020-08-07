@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 .navbar {
     height: 10vh;
     background: $primaryColor;
@@ -6,13 +8,15 @@
     align-items: center;
     font-family: "Open Sans", sans-serif;
     .icon {
-        color: white;
+        @include fonticon;
+        text-transform: initial;
+        color: $textColor;
         padding-left: $defPadding;
         text-decoration: none;
-        text-transform: uppercase;
-        letter-spacing: 0.5rem;
-        font-weight: bold;
         position: relative;
+        &:hover {
+            color: $hoverColor;
+        }
     }
     .navlinks {
         display: flex;

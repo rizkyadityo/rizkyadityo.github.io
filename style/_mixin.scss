@@ -19,15 +19,21 @@
 }
 
 @mixin fonth1swiper{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-size: $sizeH;
-    font-weight: bolder;
+    font-weight: lighter;
     letter-spacing: $spaceHswiper;
 }
 
 @mixin fonth1posttitle{
-    font-family: 'Libre Baskerville', serif;
-    font-size: $sizeHpost;
-    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    font-weight: lighter;
+    font-size: $sizeH;
     letter-spacing: $spaceHposttitle;
+}
+
+@mixin fonticon{
+    font-family: 'Lobster', cursive;
+    font-size: $sizeIcon;
+    letter-spacing: $spaceIcon;
 }

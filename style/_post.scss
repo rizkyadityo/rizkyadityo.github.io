@@ -10,7 +10,9 @@
         }
     }
     .posttitle{
-        @include fonth1posttitle;
+        h1{
+            @include fonth1posttitle;
+        }
         color: $textColor;
         padding: 5rem;
         text-align: center;

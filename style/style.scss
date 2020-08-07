@@ -198,6 +198,7 @@ body {
         grid-row-gap: 30px;
         img {
             width: 100%;
+            margin-bottom: 1rem;
         }
         .post{
             color: $textColor;
@@ -206,7 +207,10 @@ body {
                 color: inherit;
             }
             h3{
+                @include fonth1swiper;
+                margin-bottom: 1rem;
                 font-size: 1.5rem;
+                
             }
         }
     }
