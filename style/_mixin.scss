@@ -27,9 +27,16 @@
 
 @mixin fonth1posttitle{
     font-family: 'Playfair Display', serif;
-    font-weight: lighter;
+    font-weight: bold;
     font-size: $sizeH;
     letter-spacing: $spaceHposttitle;
+}
+
+@mixin fontppost{
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    fint-size: $sizeP;
+    letter-spacing: 0.1rem;
 }
 
 @mixin fonticon{

@@ -5,7 +5,9 @@ $defPadding: 5rem;
 // Sizing
 
 $heightSwiper: 60vh;
+$heightSwiperResp: 48vh;
 $widthSwiper: 50vh;
+$widthSwiperResp: 40vh;
 
 // Fonts
 
@@ -20,6 +22,11 @@ $spaceP: 0.05rem;
 $spaceHswiper: 0.05rem;
 $spaceHposttitle: 0.1rem;
 $spaceIcon: 0.05rem;
+
+// Paddings
+
+$padding1080: 3rem;
+$padding720: 2rem;
 
 // Colors
 $bgColor: rgba(0, 0, 0, 0.6);
